@@ -1,0 +1,14 @@
+# Disable directory browsing
+Options All -Indexes
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js|jpg|jpeg|png|gif|mov|webp|svg)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+   
+    # WEEK
+    <FilesMatch "\.(ttf|ttc|otf|eot|woff|woff2|font.css|css|js|jpg|jpeg|png|gif|mov|webp|svg)$">
+        Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+</IfModule>
+
